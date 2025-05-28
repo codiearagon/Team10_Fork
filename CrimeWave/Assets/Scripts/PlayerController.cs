@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviourPun
     private bool isWalking = false; // Flag to check if the player is walking for sprite animation
     private float maxHealth = 100f;
     private float health;
-    private int moneyDroppedOnDeath = 10000; // money the player will drop as loot
+    private int moneyDroppedOnDeath = 100000; // money the player will drop as loot
     private float respawnDelay = 3f; // Delay before respawn
     private float respawnImmunityCurrentTime = 0f; // Current time since last immunity
     private float respawnImmunityRequiredTime = 5f; // Delay before immunity after respawn
