@@ -121,11 +121,6 @@ public class PlayerController : MonoBehaviourPun
         {
             moveDirection += Vector2.right; // Move right
         }
-        //SUICIDE BUTTON FOR TESTING PURPOSES.
-        if(Input.GetKey(KeyCode.Space)) 
-        {
-            Death(); //suicide
-        }
 
         // Move the player based on the combined movement direction
         if (moveDirection != Vector2.zero)

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         Debug.Log("GameManager Start - Is connected: " + PhotonNetwork.IsConnected); // ADDED: Basic connection check
         if (PhotonNetwork.IsConnected)
         {
-            if(PlayerManager.localPlayerInstance == null)
+            //if(PlayerManager.localPlayerInstance == null)
                 CreatePlayer(); // MODIFIED: Always try to create a player if connected
         }
     }

@@ -6,12 +6,13 @@ using System.Runtime.ConstrainedExecution;
 using ExitGames.Client.Photon;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviourPun, IOnEventCallback
 {
     public UIManager uiManager;
 
-    private float gameLength = 60f;
+    private float gameLength = 300f;
     private float currentTime;
     private bool isCounting;
 
@@ -74,12 +75,16 @@ public class GameTimer : MonoBehaviourPun, IOnEventCallback
 
         string minutes = ((int)currentTime / 60).ToString("00");
         string seconds = ((int)currentTime % 60).ToString("00");
-        uiManager.gameTimerText.text = "Time until ioland explodes: " + minutes + ":" + seconds;
+        uiManager.gameTimerText.text = "Time until island explodes: " + minutes + ":" + seconds;
     }
 
     private void OnGameDone_Receive(object[] data)
     {
-        uiManager.endText.gameObject.SetActive(true);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.Log("Master client loading level for all players"); // ADDED: Debug info
+            PhotonNetwork.LoadLevel("EndScene");
+        }
     }
 
     private void OnEnable()
