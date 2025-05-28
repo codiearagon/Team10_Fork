@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCamera : MonoBehaviourPun
 {
@@ -14,13 +15,17 @@ public class PlayerCamera : MonoBehaviourPun
 
     void LateUpdate()
     {
-        FollowLocalPlayer();
+        if(SceneManager.GetActiveScene().name == "Game")
+        {
+            cam = Camera.main;
+
+            FollowLocalPlayer();
+        }
     }
 
     void FollowLocalPlayer()
     {
-
         if(photonView.IsMine)
-            cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3 (transform.position.x, transform.position.y, -10), 5.0f * Time.deltaTime);
+            cam.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
     }
 }

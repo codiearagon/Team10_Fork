@@ -1,9 +1,11 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerManager : MonoBehaviourPunCallbacks, IPunInstantiateMagicCallback
+public class PlayerManager : MonoBehaviourPun, IPunInstantiateMagicCallback
 {
     public static GameObject localPlayerInstance;
+    public bool winner;
 
     private void Awake()
     {
