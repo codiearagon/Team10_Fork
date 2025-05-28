@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a2ebdb1c063e94b8b731bd5ab075e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  lootDropAmount: 200
+  maxHealth: 50
+  lootDropAmount: 10000
   respawnDelay: 5
   prefabName: Bench
 --- !u!1 &972455469879214478
