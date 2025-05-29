@@ -16,17 +16,10 @@ public class GameManager : MonoBehaviourPunCallbacks
         Debug.Log("GameManager Start - Is connected: " + PhotonNetwork.IsConnected); // ADDED: Basic connection check
         if (PhotonNetwork.IsConnected)
         {
-            //if(PlayerManager.localPlayerInstance == null)
+            if(PlayerManager.localPlayerInstance == null)
                 CreatePlayer(); // MODIFIED: Always try to create a player if connected
         }
     }
-
-/*
-    public override void OnJoinedRoom()
-    {
-        CreatePlayer(); // MODIFIED: Always try to create a player if connected
-    }
-    */
 
     void CreatePlayer()
     {
@@ -77,12 +70,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         // everybody leaves when host leaves
-        LeaveGame();
+        // LeaveGame();
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        // host leaves when anybody leaves
-        LeaveGame();
+        PhotonNetwork.Destroy((GameObject)otherPlayer.TagObject);
     }
 }
