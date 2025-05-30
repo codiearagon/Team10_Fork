@@ -12,6 +12,13 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        // hide room after starting to nobody can join after game started
+        if(PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            PhotonNetwork.CurrentRoom.IsVisible = false;
+        }
+
         // COMPLETELY REVISED: Simplified player instantiation logic
         Debug.Log("GameManager Start - Is connected: " + PhotonNetwork.IsConnected); // ADDED: Basic connection check
         if (PhotonNetwork.IsConnected)
