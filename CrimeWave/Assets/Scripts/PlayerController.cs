@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviourPun
 {
@@ -217,20 +218,24 @@ public class PlayerController : MonoBehaviourPun
 
         yield return new WaitForSeconds(respawnDelay);
 
-        // Pick a random spawn point
-        transform.position = new Vector2(0,0);
+        // Don't respawn when at end screen
+        if(SceneManager.GetActiveScene().name == "Game")
+        {
+            // Pick a random spawn point
+            transform.position = new Vector2(0, 0);
 
-        // Reset health
-        health = maxHealth;
-        isDead = false;
+            // Reset health
+            health = maxHealth;
+            isDead = false;
 
-        photonView.RPC("SetAliveState", RpcTarget.All, true);
+            photonView.RPC("SetAliveState", RpcTarget.All, true);
 
-        // Update UI health text
-        uiManager.SetHealthText(health);
+            // Update UI health text
+            uiManager.SetHealthText(health);
 
-        // Reset immunity time
-        photonView.RPC("SetIsImmune", RpcTarget.All, true);
+            // Reset immunity time
+            photonView.RPC("SetIsImmune", RpcTarget.All, true);
+        }
     }
 
     private void UpdateImmunity()

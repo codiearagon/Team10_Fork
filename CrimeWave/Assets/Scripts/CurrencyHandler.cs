@@ -16,7 +16,7 @@ public class CurrencyHandler : MonoBehaviourPun
     // Called when Photon instantiates this player object
     private void Start()
     {
-        money = 999999;
+        money = 0;
         // Only initialize UI for the local player
         if (photonView.IsMine)
         {
