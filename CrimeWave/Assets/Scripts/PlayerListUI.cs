@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,7 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerListUI : MonoBehaviour
+public class PlayerListUI : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject playerListPrefab;
     [SerializeField] private GameObject playerListContainer;
@@ -35,7 +36,7 @@ public class PlayerListUI : MonoBehaviour
 
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Game")
+        if (SceneManager.GetActiveScene().name == "Game")
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
@@ -55,7 +56,7 @@ public class PlayerListUI : MonoBehaviour
 
     IEnumerator UpdatePlayerList()
     {
-        while(tabHeld)
+        while (tabHeld)
         {
             UpdateList();
             yield return new WaitForSeconds(updateInterval);
@@ -68,7 +69,7 @@ public class PlayerListUI : MonoBehaviour
         {
             GameObject player = (GameObject)PhotonNetwork.PlayerList[i].TagObject;
 
-            if(player == null) // avoid crashing game when pressing tab during player load
+            if (player == null) // avoid crashing game when pressing tab during player load
                 continue;
 
             GameObject playerList = playersListObjects[i]; // player listing
@@ -85,5 +86,17 @@ public class PlayerListUI : MonoBehaviour
 
             Debug.Log(player.GetComponent<PhotonView>().Owner.NickName + ": " + player.GetComponent<CurrencyHandler>().money);
         }
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        GameObject ply = Instantiate(playerListPrefab, transform.position, Quaternion.identity, playerListContainer.transform);
+        playersListObjects.Add(ply);
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        Destroy(playersListObjects[playersListObjects.Count - 1]);
+        playersListObjects.RemoveAt(playersListObjects.Count - 1);
     }
 }

@@ -24,13 +24,14 @@ public class EndManager : MonoBehaviourPunCallbacks
             playerObj.GetComponent<PlayerGun>().enabled = false;
             playerObj.GetComponent<PerkTimer>().enabled = false;
 
-            if(playerObj.GetComponent<PlayerManager>().winner)
+            if (playerObj.GetComponent<PlayerManager>().winner)
             {
                 finishText.text = player.NickName + " won the game.";
             }
         }
 
         Cursor.visible = true;
+        PlayerManager.localPlayerInstance = null;
 
         if (!PhotonNetwork.IsMasterClient)
             restartButton.SetActive(false);
