@@ -21,8 +21,11 @@ public class Perk : MonoBehaviour
         selectButton = transform.Find("PerkSelect").GetComponent<Button>();
 
         perkNameText.text = effect.perkName;
+        perkNameText.color = effect.perkColor;
         perkDescriptionText.text = effect.perkDescription;
+        perkDescriptionText.color = effect.perkColor;
 
+        perkDurationText.color = effect.perkColor;
         if (!effect.isPermanent)
             perkDurationText.text = effect.perkDuration + " secs";
         else

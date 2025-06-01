@@ -1,9 +1,11 @@
 using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MoneyLoot : MonoBehaviourPun, IPunInstantiateMagicCallback
 {
     private float moneyAmount;
+    [SerializeField] private List<Sprite> moneySprites = new List<Sprite>();
 
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {

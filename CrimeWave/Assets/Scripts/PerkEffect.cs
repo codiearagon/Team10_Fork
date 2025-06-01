@@ -9,6 +9,7 @@ public abstract class PerkEffect : ScriptableObject
     public string perkDescription;
     public float perkDuration;
     public bool isPermanent;
+    public Color perkColor;
 
     public abstract void Apply(GameObject player);
     public abstract IEnumerator Duration(GameObject player, GameObject perkTextInstance);

@@ -16,4 +16,5 @@ MonoBehaviour:
   perkDescription: Permanently gain a bonus 10 health
   perkDuration: 0
   isPermanent: 1
+  perkColor: {r: 0.5176471, g: 0.84705883, b: 0.8784314, a: 1}
   amount: 10
