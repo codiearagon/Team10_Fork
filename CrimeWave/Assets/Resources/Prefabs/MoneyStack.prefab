@@ -170,3 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745d8409ec5fb84498369a92103ee01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneySprites:
+  - {fileID: -1215337248539294204, guid: 6a09ab67774ff874e88dde1d2ac2a490, type: 3}
+  - {fileID: 2879923659837411734, guid: 0980b5daa45df9644b78415fa25e1f6e, type: 3}
+  - {fileID: -7223139905496175203, guid: 671589cc206f6c1418b0a97cef9b86c0, type: 3}
+  - {fileID: 3262956663219677211, guid: 5dcfc28b4efa62b4f946de8187244165, type: 3}

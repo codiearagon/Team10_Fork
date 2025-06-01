@@ -1,15 +1,18 @@
 using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MoneyLoot : MonoBehaviourPun, IPunInstantiateMagicCallback
 {
     private float moneyAmount;
+    [SerializeField] private List<Sprite> moneySprites = new List<Sprite>();
 
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {
         object[] instantiationData = photonView.InstantiationData;
         if (instantiationData != null && instantiationData.Length > 0)
         {
+            GetComponent<SpriteRenderer>().sprite = moneySprites[Random.Range(0, moneySprites.Count)];
             moneyAmount = (float)instantiationData[0];
             Debug.Log("MoneyLoot initialized with amount: " + moneyAmount);
         }
