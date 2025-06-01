@@ -16,7 +16,7 @@ public class CurrencyHandler : MonoBehaviourPun
     // Called when Photon instantiates this player object
     private void Start()
     {
-        money = 0;
+        money = 999999;
         // Only initialize UI for the local player
         if (photonView.IsMine)
         {
@@ -65,10 +65,9 @@ public class CurrencyHandler : MonoBehaviourPun
     {
         money += amount;
 
-        if(money >= 1000000)
+        if(money < 1000000 && GetComponent<PlayerManager>().winner)
         {
-            GetComponent<PlayerManager>().winner = true;
-            PhotonNetwork.LoadLevel("EndScene");
+            GetComponent<PlayerManager>().winner = false;
         }
 
         Debug.Log("Money changed by: " + amount + " New total: " + money);
