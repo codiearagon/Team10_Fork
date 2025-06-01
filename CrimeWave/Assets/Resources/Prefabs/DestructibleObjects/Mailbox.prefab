@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a2ebdb1c063e94b8b731bd5ab075e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 60
-  lootDropAmount: 1000
-  respawnDelay: 10
-  prefabName: DestructibleObject
+  maxHealth: 10
+  lootDropAmount: 1500
+  respawnDelay: 5
+  prefabName: Mailbox
 --- !u!61 &745320104330727127
 BoxCollider2D:
   m_ObjectHideFlags: 0
