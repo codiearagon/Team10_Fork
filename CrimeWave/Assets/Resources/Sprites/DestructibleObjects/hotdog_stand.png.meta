@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hotdog_stand_0: -1762221443295114892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
