@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: -6133657181662262661, guid: 8a3700f1cbf00224c999e4c4c5e46903, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -190,8 +190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  lootDropAmount: 5000
-  respawnDelay: 5
+  lootDropAmount: 3000
+  respawnDelay: 10
   prefabName: Lamppost
 --- !u!1 &4175117690760913013
 GameObject:

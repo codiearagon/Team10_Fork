@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviourPun
 {
@@ -47,14 +48,6 @@ public class PlayerController : MonoBehaviourPun
         {
             Debug.LogError("PhotonView is null on PlayerController!");
             return;
-        }
-
-        if (photonView.IsMine)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-
-            }
         }
     }
 
@@ -152,6 +145,7 @@ public class PlayerController : MonoBehaviourPun
         if (isImmune) return; // Ignore if within immunity time
 
         health += amount;
+
         if (health <= 0)
         {
             Death(); // Call death function if health is 0 or less

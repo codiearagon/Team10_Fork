@@ -13,7 +13,7 @@ public class PerkTimer : MonoBehaviour
     {
         uiManager = UIManager.UIManagerInstance;
 
-        SetMaxTime(10f);
+        SetMaxTime(20f);
         StartCountdown();
     }
 

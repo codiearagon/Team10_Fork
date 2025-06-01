@@ -16,4 +16,5 @@ MonoBehaviour:
   perkDescription: Temporarily gain 5 move speed;
   perkDuration: 30
   isPermanent: 0
+  perkColor: {r: 0.8217727, g: 0.44459772, b: 0.9150943, a: 1}
   amount: 3

@@ -1,6 +1,7 @@
 using Photon.Pun;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CurrencyHandler : MonoBehaviourPun
 {
@@ -65,10 +66,9 @@ public class CurrencyHandler : MonoBehaviourPun
     {
         money += amount;
 
-        if(money >= 1000000)
+        if(money < 1000000 && GetComponent<PlayerManager>().winner)
         {
-            GetComponent<PlayerManager>().winner = true;
-            PhotonNetwork.LoadLevel("EndScene");
+            photonView.RPC("SetWinner", RpcTarget.All, false);
         }
 
         Debug.Log("Money changed by: " + amount + " New total: " + money);
