@@ -68,7 +68,7 @@ public class CurrencyHandler : MonoBehaviourPun
 
         if(money < 1000000 && GetComponent<PlayerManager>().winner)
         {
-            GetComponent<PlayerManager>().winner = false;
+            photonView.RPC("SetWinner", RpcTarget.All, false);
         }
 
         Debug.Log("Money changed by: " + amount + " New total: " + money);

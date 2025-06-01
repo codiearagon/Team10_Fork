@@ -18,7 +18,7 @@ public class AirportHandler : MonoBehaviour
             // if has more than 1m
             if(collision.GetComponent<CurrencyHandler>().money >= 1000000)
             {
-                collision.GetComponent<PlayerManager>().winner = true; // set to winner
+                collision.GetComponent<PhotonView>().RPC("SetWinner", RpcTarget.All, true);
                 PhotonNetwork.LoadLevel("EndScene"); // load 
             }
         }

@@ -47,4 +47,10 @@ public class PlayerManager : MonoBehaviourPun, IPunInstantiateMagicCallback
     {
         info.Sender.TagObject = this.gameObject; // set a reference to a player's game object through tagobject
     }
+
+    [PunRPC]
+    public void SetWinner(bool state)
+    {
+        winner = state;
+    }
 }

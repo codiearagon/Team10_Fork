@@ -12,7 +12,7 @@ public class MoneyLoot : MonoBehaviourPun, IPunInstantiateMagicCallback
         object[] instantiationData = photonView.InstantiationData;
         if (instantiationData != null && instantiationData.Length > 0)
         {
-            GetComponent<SpriteRenderer>().sprite = moneySprites[Random.Range(0, moneySprites.Count)];
+            photonView.RPC("ChangeSprite", RpcTarget.All);
             moneyAmount = (float)instantiationData[0];
             Debug.Log("MoneyLoot initialized with amount: " + moneyAmount);
         }
@@ -20,6 +20,12 @@ public class MoneyLoot : MonoBehaviourPun, IPunInstantiateMagicCallback
         {
             Debug.LogWarning("MoneyLoot instantiated without data!");
         }
+    }
+
+    [PunRPC]
+    public void ChangeSprite()
+    {
+        GetComponent<SpriteRenderer>().sprite = moneySprites[Random.Range(0, moneySprites.Count)];
     }
 
     [PunRPC]
