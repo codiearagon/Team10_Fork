@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1553490378837457135}
   - component: {fileID: -8279582683001880191}
   m_Layer: 0
-  m_Name: TrashCan
+  m_Name: Trashcan
   m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,10 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a2ebdb1c063e94b8b731bd5ab075e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  lootDropAmount: 100
-  respawnDelay: 5
-  prefabName: DestructibleObject
+  maxHealth: 15
+  lootDropAmount: 2000
+  respawnDelay: 8
+  prefabName: Trashcan
 --- !u!1 &5380175415788978705
 GameObject:
   m_ObjectHideFlags: 0
