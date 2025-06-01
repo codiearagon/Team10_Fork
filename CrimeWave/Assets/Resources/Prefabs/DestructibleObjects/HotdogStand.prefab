@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   lootDropAmount: 7000
-  respawnDelay: 5
+  respawnDelay: 15
   prefabName: HotdogStand
 --- !u!1 &1656507418563220797
 GameObject:

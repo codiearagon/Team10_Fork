@@ -16,4 +16,5 @@ MonoBehaviour:
   perkDescription: Temporarily gain a bonus 50 health
   perkDuration: 30
   isPermanent: 0
+  perkColor: {r: 0.5176471, g: 0.84705883, b: 0.8784314, a: 1}
   amount: 50
