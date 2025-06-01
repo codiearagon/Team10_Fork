@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5493217222325180560, guid: 89aedebbd29ef4948bb822e75beef8b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a2ebdb1c063e94b8b731bd5ab075e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  lootDropAmount: 100
-  respawnDelay: 5
+  maxHealth: 80
+  lootDropAmount: 2000
+  respawnDelay: 15
   prefabName: DestructibleObject
 --- !u!1 &5380175415788978705
 GameObject:

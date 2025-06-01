@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fire_hydrant_0: -2717637495313126343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
