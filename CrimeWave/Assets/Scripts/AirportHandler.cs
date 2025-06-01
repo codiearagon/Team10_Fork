@@ -16,10 +16,10 @@ public class AirportHandler : MonoBehaviour
         if (collision != null && collision.CompareTag("Player"))
         {
             // if has more than 1m
-            if(collision.GetComponent<CurrencyHandler>().money >= 1000000)
+            if (collision.GetComponent<CurrencyHandler>().money >= 1000000)
             {
                 collision.GetComponent<PhotonView>().RPC("SetWinner", RpcTarget.All, true);
-                PhotonNetwork.LoadLevel("EndScene"); // load 
+                collision.GetComponent<PhotonView>().RPC("LoadEnd", RpcTarget.MasterClient);
             }
         }
     }

@@ -53,4 +53,10 @@ public class PlayerManager : MonoBehaviourPun, IPunInstantiateMagicCallback
     {
         winner = state;
     }
+
+    [PunRPC]
+    public void LoadEnd()
+    {
+        PhotonNetwork.LoadLevel("EndScene"); // load 
+    }
 }
