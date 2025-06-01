@@ -24,7 +24,7 @@ MonoBehaviour:
   bulletSplashDamageRange: 0.5
   bulletsPerShot: 1
   bulletSpread: 0
-  reloadTime: 7
+  reloadTime: 5
   magazineSize: 100
   gunSprite: {fileID: 833705408150040578, guid: 9867414388ca28b41996b5d9de992557, type: 3}
   bulletSpritePath: Sprites/bullet
