@@ -8,6 +8,8 @@ public class BulletLogic : MonoBehaviourPun
     public float range; // Range of the bullet
     public float damage; // Damage dealt by the bullet
     public float splashDamageRange; // Splash damage range of bullet on hit or impact
+    public float playerDamageMultiplier;
+    public float objectDamageMultiplier;
     private int shooterViewID;
     private float distanceTravelled; // Distance traveled by the bullet
     private bool hasHit = false; // Flag to check if the bullet has hit something
@@ -99,13 +101,13 @@ public class BulletLogic : MonoBehaviourPun
             // Damage other players (but not the shooter)
             if (hit.CompareTag("Player") && hitPV != null && hitPV.ViewID != shooterViewID)
             {
-                hitPV.RPC("ChangeHealthBy", RpcTarget.All, -damage);
+                hitPV.RPC("ChangeHealthBy", RpcTarget.All, -damage * playerDamageMultiplier);
             }
 
             // Damage destructible objects
             if (hit.CompareTag("Destructible"))
             {
-                hit.GetComponent<DestructibleObject>().RemoveHealth(damage);
+                hit.GetComponent<DestructibleObject>().RemoveHealth(damage * objectDamageMultiplier);
             }
         }
         PhotonNetwork.Destroy(gameObject); // Destroy bullet

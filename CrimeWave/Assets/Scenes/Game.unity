@@ -14660,6 +14660,14 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 35ecfa4f785bd4f48beb0b332ce118c5, type: 2}
     - {fileID: 11400000, guid: ba0746dc650873940a0627aa0463b2a9, type: 2}
     - {fileID: 11400000, guid: 0f3561cb16544534ab5646383f060e04, type: 2}
+  - list:
+    - {fileID: 11400000, guid: f4672a931584d084aa6001b734dfd581, type: 2}
+    - {fileID: 11400000, guid: 48afe0910ef6d04439457448f5cba5d3, type: 2}
+    - {fileID: 11400000, guid: e2df898931f19e64485403e4772e5383, type: 2}
+  - list:
+    - {fileID: 11400000, guid: 8248e03d5481c994cb7e0cb637909286, type: 2}
+    - {fileID: 11400000, guid: 3d317e3a3aecc6a45a2892ff9daf4eaf, type: 2}
+    - {fileID: 11400000, guid: 571ec09777e7d734987d4a32216f7cd3, type: 2}
   perkObject: {fileID: 5013937644418621010, guid: f61034d180e6d8a45a61e4174d6f4150, type: 3}
 --- !u!1 &1037430124
 GameObject:

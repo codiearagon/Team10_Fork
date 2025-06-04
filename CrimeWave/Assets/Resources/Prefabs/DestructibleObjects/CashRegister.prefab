@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a2ebdb1c063e94b8b731bd5ab075e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  lootDropAmount: 40000
-  respawnDelay: 30
+  maxHealth: 60
+  lootDropAmount: 30000
+  respawnDelay: 90
   prefabName: CashRegister
 --- !u!1 &5380175415788978705
 GameObject:
