@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2b67421f7cb6248a5398a8c5f59c41, type: 3}
+  m_Name: TempBigObjDmgBuff
+  m_EditorClassIdentifier: 
+  perkName: Object Damage Buff
+  perkDescription: Temporary 1.5x damage multiplier against objects
+  perkDuration: 20
+  isPermanent: 0
+  perkColor: {r: 0.9529412, g: 0.9254902, b: 0.44313726, a: 1}
+  amount: 1.5

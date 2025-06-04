@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 15
-  lootDropAmount: 2000
-  respawnDelay: 8
+  lootDropAmount: 25000
+  respawnDelay: 50
   prefabName: Trashcan
 --- !u!1 &5380175415788978705
 GameObject:

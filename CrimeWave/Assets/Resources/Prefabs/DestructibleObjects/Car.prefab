@@ -143,9 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a2ebdb1c063e94b8b731bd5ab075e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
-  lootDropAmount: 150000
-  respawnDelay: 60
+  maxHealth: 100
+  lootDropAmount: 100000
+  respawnDelay: 120
   prefabName: Car
 --- !u!61 &1880861570655869748
 BoxCollider2D:

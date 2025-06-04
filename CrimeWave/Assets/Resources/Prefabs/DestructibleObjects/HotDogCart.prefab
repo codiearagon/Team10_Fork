@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 40
-  lootDropAmount: 7000
-  respawnDelay: 15
+  lootDropAmount: 40000
+  respawnDelay: 70
   prefabName: HotDogCart
 --- !u!1 &5380175415788978705
 GameObject:

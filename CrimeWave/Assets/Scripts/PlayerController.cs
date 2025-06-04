@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviourPun
     private bool isWalking = false; // Flag to check if the player is walking for sprite animation
     private float maxHealth = 100f;
     private float health;
-    private int moneyDroppedOnDeath = 100000; // money the player will drop as loot
+    private int moneyDroppedOnDeath = 200000; // money the player will drop as loot
     private float respawnDelay = 3f; // Delay before respawn
     private float respawnImmunityCurrentTime = 0f; // Current time since last immunity
     private float respawnImmunityRequiredTime = 5f; // Delay before immunity after respawn
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviourPun
         photonView.RPC("SetAliveState", RpcTarget.All, false);
 
         // Call loot drop function
-        ch.GenerateLoot(Mathf.Clamp(ch.money, 0, moneyDroppedOnDeath));
+        ch.GenerateLoot(Mathf.Clamp(ch.money, 150000, moneyDroppedOnDeath));
         Debug.Log("Loot dropped: " + moneyDroppedOnDeath);
 
         // Only the owner starts respawn logic

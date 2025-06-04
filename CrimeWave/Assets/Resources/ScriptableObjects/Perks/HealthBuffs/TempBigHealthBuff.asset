@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TempBigHealthBuff
   m_EditorClassIdentifier: 
   perkName: Health
-  perkDescription: Temporarily gain a bonus 200 health
+  perkDescription: Temporarily gain a bonus 100 health
   perkDuration: 30
   isPermanent: 0
   perkColor: {r: 0.9529412, g: 0.9254902, b: 0.44313726, a: 1}
-  amount: 200
+  amount: 100

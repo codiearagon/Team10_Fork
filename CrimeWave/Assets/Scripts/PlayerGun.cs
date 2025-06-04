@@ -19,10 +19,15 @@ public class PlayerGun : MonoBehaviourPun
     private float reloadEndTime = 0f; // Time when current reload will finish
     public AudioClip reloadSoundEffect; // General reload sound if gun doesn't have one
 
+    public float playerDamageMultiplier = 1f;
+    public float objectDamageMultuplier = 1f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerDamageMultiplier = 1f;
+        objectDamageMultuplier = 1f;
         // loads in all guns from the Resources folder
         guns = new List<Gun>(Resources.LoadAll<Gun>("ScriptableObjects/Guns"));
         // sorts the guns by their selector index
@@ -216,6 +221,8 @@ public class PlayerGun : MonoBehaviourPun
         );
 
         bullet.GetComponent<BulletLogic>().SetBulletData(currentGun); // Set the bullet data from the gun
+        bullet.GetComponent<BulletLogic>().playerDamageMultiplier = playerDamageMultiplier;
+        bullet.GetComponent<BulletLogic>().objectDamageMultiplier = objectDamageMultuplier;
         bullet.GetComponent<BulletLogic>().SetShooterViewID(photonView.ViewID); // Set the shooter view ID
         bullet.transform.up = transform.up; // Set the bullet's direction to the player's direction
     }
@@ -248,5 +255,17 @@ public class PlayerGun : MonoBehaviourPun
 
         UpdateAmmoUI();
 
+    }
+
+    [PunRPC]
+    public void SetPlayerDMGMulBy(float amount)
+    {
+        playerDamageMultiplier = amount;
+    }
+
+    [PunRPC]
+    public void SetObjectDMGMul(float amount)
+    {
+        objectDamageMultuplier = amount;
     }
 }

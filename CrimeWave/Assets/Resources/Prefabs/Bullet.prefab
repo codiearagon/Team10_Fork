@@ -212,3 +212,5 @@ MonoBehaviour:
   range: 0
   damage: 0
   splashDamageRange: 0
+  playerDamageMultiplier: 1
+  objectDamageMultiplier: 1

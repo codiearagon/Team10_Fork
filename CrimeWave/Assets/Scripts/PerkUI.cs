@@ -51,7 +51,12 @@ public class PerkUI : MonoBehaviour
             newPerk.GetComponentInChildren<Button>().onClick.AddListener(newPerk.GetComponent<Perk>().ActivatePerk); // add onclick listener 
             newPerk.GetComponentInChildren<Button>().GetComponentInChildren<TMP_Text>().SetText("Press " + (i + 1));
 
-            PerkEffectList randomCategory = perkCategories[Random.Range(0, perkCategories.Count)];
+            PerkEffectList randomCategory;
+            if (i < 2)
+                randomCategory = perkCategories[i];
+            else
+                randomCategory = perkCategories[Random.Range(2, 4)];
+
             PerkEffect randomEffectInCategory = randomCategory.list[Random.Range(0, randomCategory.list.Count)];
             newPerk.GetComponent<Perk>().effect = randomEffectInCategory;
             newPerk.GetComponent<Perk>().perkTimer = perkTimer;
