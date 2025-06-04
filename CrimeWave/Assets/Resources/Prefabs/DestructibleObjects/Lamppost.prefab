@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  lootDropAmount: 20000
+  lootDropAmount: 5000
   respawnDelay: 40
   prefabName: Lamppost
 --- !u!61 &8527072205198875939

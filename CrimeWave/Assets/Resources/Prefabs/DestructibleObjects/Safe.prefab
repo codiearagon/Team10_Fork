@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 80
-  lootDropAmount: 80000
+  lootDropAmount: 40000
   respawnDelay: 100
   prefabName: Safe
 --- !u!61 &3085921552051400873

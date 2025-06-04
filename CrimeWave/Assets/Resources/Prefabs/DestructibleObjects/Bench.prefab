@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 40
-  lootDropAmount: 50000
+  lootDropAmount: 25000
   respawnDelay: 80
   prefabName: Bench
 --- !u!1 &972455469879214478

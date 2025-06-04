@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  lootDropAmount: 10000
+  lootDropAmount: 1000
   respawnDelay: 30
   prefabName: Mailbox
 --- !u!61 &745320104330727127
